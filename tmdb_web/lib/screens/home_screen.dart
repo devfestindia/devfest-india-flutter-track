@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/widgets/leaderboard_tile.dart';
+import 'package:tmdb_web/widgets/trailer_section.dart';
+import 'package:tmdb_web/widgets/trending_section.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -12,10 +14,11 @@ class HomeScreen extends StatelessWidget {
         //AppBar Section
         title: Text('TMDB'),
       ),
-      body: Row(
+      body: ListView(
         children: [
           //HomeBanner Section
-          //Trailer Section
+          TrailerSection(),
+          TrendingSection(),
           //Trending Section
           //Leaderboard Section
           LeaderBoardTile(),
