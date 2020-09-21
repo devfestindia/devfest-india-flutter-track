@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/models/ratings.dart';
-import 'package:tmdb_web/widgets/rating_widget.dart';
+import 'package:tmdb_web/widgets/leaderboard/rating_widget.dart';
 
 class LeaderDetailsTile extends StatelessWidget {
   @override
