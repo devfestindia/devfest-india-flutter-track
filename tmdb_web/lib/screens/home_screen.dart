@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         //AppBar Section
         title: Text('TMDB'),
       ),
-      body: Row(
+      body: Column(
         children: [
           //HomeBanner Section
           //Trailer Section
