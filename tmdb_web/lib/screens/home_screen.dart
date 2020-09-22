@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_web/widgets/leaderboard_tile.dart';
 import 'package:tmdb_web/widgets/trailer_section.dart';
 import 'package:tmdb_web/widgets/trending_section.dart';
 

@@ -6,13 +6,16 @@ class TrendingSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(36.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Trending',
-            style: TextStyle(fontSize: 25),
+            style: TextStyle(
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           TrailerCardList(),
         ],
@@ -27,11 +30,11 @@ class TrailerCardList extends StatelessWidget {
     return Container(
       height: 200,
       child: ListView.builder(
-          itemCount: 5,
+          itemCount: 25,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, count) => MovieCardItem(
                 height: 200,
-                aspectRatio: 4.0 / 9.0,
+                aspectRatio: 4.0 / 6.0,
               )),
     );
   }
