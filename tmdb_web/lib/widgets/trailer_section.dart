@@ -39,11 +39,17 @@ class TrailerCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 200,
       child: ListView.builder(
           itemCount: 5,
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, count) => MovieCardItem()),
+          itemBuilder: (context, count) => Column(
+            children: [
+              MovieCardItem(),
+              Text(faker.person.firstName()),
+              Text(faker.lorem.words(5).toString())
+            ],
+          )),
     );
   }
 }

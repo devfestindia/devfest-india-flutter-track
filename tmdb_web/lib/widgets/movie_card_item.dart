@@ -11,22 +11,20 @@ class MovieCardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Container(
-            height: height ?? 120,
-            child: AspectRatio(
-              aspectRatio: aspectRatio ?? 9 / 4,
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
-              ),
-            ),
+      child: Container(
+        height: height ?? 120,
+        child: AspectRatio(
+          aspectRatio: aspectRatio ?? 9 / 4,
+          child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                    image: NetworkImage(
+                        "https://img.pngio.com/movie-poster-background-editing-picsart-photo-744-free-image-movie-poster-png-480_580.jpg")),
+                color: Colors.blue,
+                borderRadius: BorderRadius.all(Radius.circular(10))),
           ),
-          Text(faker.person.firstName()),
-          Text(faker.lorem.words(5).toString())
-        ],
+        ),
       ),
     );
   }
