@@ -3,6 +3,8 @@ import 'package:tmdb_web/widgets/leaderboard_tile.dart';
 import 'package:tmdb_web/widgets/trailer_section.dart';
 import 'package:tmdb_web/widgets/trending_section.dart';
 
+import 'package:tmdb_web/widgets/footer/footerboard_tile.dart';
+import 'package:tmdb_web/widgets/leaderboard/leaderboard_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -14,16 +16,17 @@ class HomeScreen extends StatelessWidget {
         //AppBar Section
         title: Text('TMDB'),
       ),
-      body: ListView(
-        children: [
-          //HomeBanner Section
-          TrailerSection(),
-          TrendingSection(),
-          //Trending Section
-          //Leaderboard Section
-          LeaderBoardTile(),
-          //Footer Section
-        ],
+      body: SingleChildScrollView(
+              child: Column(
+          children: [
+            //HomeBanner Section
+            TrailerSection(),
+            TrendingSection(),
+            LeaderBoardTile(),
+            //Footer Section
+            FooterBoardTile(),
+          ],
+        ),
       ),
     );
   }
