@@ -5,9 +5,10 @@ class MovieCardItem extends StatelessWidget {
   final double aspectRatio;
   final double height;
   final Widget stackChild;
+  final String imageUrl;
 
-
-  MovieCardItem({this.aspectRatio, this.height, this.stackChild});
+  MovieCardItem(
+      {this.aspectRatio, this.height, this.stackChild, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +23,11 @@ class MovieCardItem extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                      fit: BoxFit.cover,
-                        image: NetworkImage(
-                            "https://images-na.ssl-images-amazon.com/images/I/71K69gamJsL._SL1024_.jpg")),
+                        fit: BoxFit.cover, image: NetworkImage(imageUrl)),
                     color: Colors.blue,
                     borderRadius: BorderRadius.all(Radius.circular(10))),
               ),
-              stackChild??SizedBox()
-
+              stackChild ?? SizedBox()
             ],
           ),
         ),

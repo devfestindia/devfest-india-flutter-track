@@ -3,6 +3,9 @@ import 'package:faker/faker.dart';
 import 'package:tmdb_web/widgets/movie_card_item.dart';
 
 class TrailerSection extends StatelessWidget {
+  final String trailerBg =
+      "https://external-preview.redd.it/N-aZmTD_HYdfSxtVe5AhnoIemwgXxxqbuu2I6ik5nsM.jpg?auto=webp&s=80d68c17706fde782b5ea1debf1557d649752eb3";
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -16,8 +19,7 @@ class TrailerSection extends StatelessWidget {
                   colorFilter: new ColorFilter.mode(
                       Colors.black.withOpacity(0.8), BlendMode.luminosity),
                   fit: BoxFit.fill,
-                  image: NetworkImage(
-                      "https://external-preview.redd.it/N-aZmTD_HYdfSxtVe5AhnoIemwgXxxqbuu2I6ik5nsM.jpg?auto=webp&s=80d68c17706fde782b5ea1debf1557d649752eb3"))),
+                  image: NetworkImage(trailerBg))),
         ),
         TrailerContent(),
       ],
@@ -59,6 +61,7 @@ class TrailerCardList extends StatelessWidget {
           itemBuilder: (context, count) => Column(
                 children: [
                   MovieCardItem(
+                    imageUrl: "https://www.placecage.com/640/360",
                     stackChild: Center(
                         child: SizedBox(
                             height: 40, child: Image.asset("images/play.png"))),

@@ -33,6 +33,8 @@ class TrailerCardList extends StatelessWidget {
           itemCount: 25,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, count) => MovieCardItem(
+                imageUrl:
+                    "https://www.stevensegallery.com/640/360",
                 height: 200,
                 aspectRatio: 4.0 / 6.0,
               )),
