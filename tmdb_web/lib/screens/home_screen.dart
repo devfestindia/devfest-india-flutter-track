@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tmdb_web/widgets/appbar_section.dart';
 import 'package:tmdb_web/widgets/trailer/trailer_section.dart';
 import 'package:tmdb_web/widgets/trending/trending_section.dart';
 
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         //AppBar Section
-        title: Text('TMDB'),
+        title: CustomAppbar(),
       ),
       body: SingleChildScrollView(
               child: Column(
