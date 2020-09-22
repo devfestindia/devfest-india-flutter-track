@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_web/widgets/trailer_section.dart';
-import 'package:tmdb_web/widgets/trending_section.dart';
+import 'package:tmdb_web/widgets/trailer/trailer_section.dart';
+import 'package:tmdb_web/widgets/trending/trending_section.dart';
 
 import 'package:tmdb_web/widgets/footer/footerboard_tile.dart';
 import 'package:tmdb_web/widgets/leaderboard/leaderboard_tile.dart';
