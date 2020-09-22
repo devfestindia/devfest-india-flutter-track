@@ -12,16 +12,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         //AppBar Section
         title: CustomAppbar(),
       ),
       body: SingleChildScrollView(
-              child: Column(
+        child: Column(
           children: [
             //HomeBanner Section
             TrailerSection(),
             TrendingSection(),
+            //LeaderBoard Section
             LeaderBoardTile(),
             //Footer Section
             FooterBoardTile(),
