@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/widgets/appbar_section.dart';
+import 'package:tmdb_web/widgets/banner/top_banner_card.dart';
 import 'package:tmdb_web/widgets/trailer/trailer_section.dart';
 import 'package:tmdb_web/widgets/trending/trending_section.dart';
 
@@ -17,17 +18,22 @@ class HomeScreen extends StatelessWidget {
         //AppBar Section
         title: CustomAppbar(),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            //HomeBanner Section
-            TrailerSection(),
-            TrendingSection(),
-            //LeaderBoard Section
-            LeaderBoardTile(),
-            //Footer Section
-            FooterBoardTile(),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 300.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TopBannerSearchCard(),
+              SizedBox(height: 40,),
+              TrendingSection(),
+
+              TrailerSection(),
+              //LeaderBoard Section
+              LeaderBoardTile(),
+              //Footer Section
+              FooterBoardTile(),
+            ],
+          ),
         ),
       ),
     );
