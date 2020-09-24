@@ -13,11 +13,10 @@ class TrailerSection extends StatelessWidget {
           height: 270,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-              color: Colors.blueGrey,
               image: DecorationImage(
                   colorFilter: new ColorFilter.mode(
-                      Colors.black.withOpacity(0.8), BlendMode.luminosity),
-                  fit: BoxFit.fill,
+                      Colors.blueGrey.withOpacity(0.4), BlendMode.lighten),
+                  fit: BoxFit.cover,
                   image: NetworkImage(trailerBg))),
         ),
         TrailerContent(),

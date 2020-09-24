@@ -20,38 +20,37 @@ class LeaderDetailsTile extends StatelessWidget {
 //CircleAvatar and Rating bar
 leaderTile(Ratings rate) => Padding(
       padding: const EdgeInsets.all(8.0),
-      child:  Expanded(
-              child: Row(
+      // @Kamal, removed the Expanded here, was causing exceptions - Pooja
+      child:  Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(2.0),
-              child: InkWell(
-                child: CircleAvatar(
-                  radius: 30.0,
-                  backgroundImage: NetworkImage(rate.leaderImage),
-                  backgroundColor: Colors.transparent,
-                ),
-                onTap: () {
-                  //
-                },
-              ),
+      padding: const EdgeInsets.all(2.0),
+      child: InkWell(
+        child: CircleAvatar(
+          radius: 30.0,
+          backgroundImage: NetworkImage(rate.leaderImage),
+          backgroundColor: Colors.transparent,
+        ),
+        onTap: () {
+          //
+        },
+      ),
             ),
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              InkWell(
-                child: Text(
-                  rate.leaderDetails,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onTap: () {},
-              ),
-              //RatingBar
-              RatingWidget(rate),
+      InkWell(
+        child: Text(
+          rate.leaderDetails,
+          style: TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        onTap: () {},
+      ),
+      //RatingBar
+      RatingWidget(rate),
             ]),
           ],
         ),
-      ),
     );
