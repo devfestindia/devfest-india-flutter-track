@@ -20,6 +20,7 @@ class TrendingMovie {
         id: json['id'],
         runTime: json['runtime'],
         genre: json['genres'],
+        releaseDate: json['release_date'],
         rating: json['vote_average']);
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tmdb_web/main.dart';
 
 class MovieCardItem extends StatelessWidget {
   final double aspectRatio;
@@ -16,7 +15,7 @@ class MovieCardItem extends StatelessWidget {
       height: height ?? 168,
       padding: EdgeInsets.only(right: 24),
       child: AspectRatio(
-        aspectRatio: aspectRatio ?? 300/168,
+        aspectRatio: aspectRatio ?? 300 / 168,
         child: Stack(
           children: [
             Container(

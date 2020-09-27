@@ -2,11 +2,11 @@ import 'package:tmdb_web/models/trending_movie.dart';
 import 'package:tmdb_web/services/api_service.dart';
 
 class Repository {
-  IAPIService apiService;
-  Repository({
-    this.apiService,
-  });
+  IAPIService _apiService;
+  Repository(
+    this._apiService,
+  );
 
-  Future<TrendingMovie> fetchTrendingMovies() =>
-      apiService.fetchTrendingMovies();
+  Future<List<TrendingMovie>> fetchTrendingMovies() =>
+      _apiService.fetchTrendingMovies();
 }

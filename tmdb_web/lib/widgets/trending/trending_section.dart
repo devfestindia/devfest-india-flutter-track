@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:faker/faker.dart';
-import 'package:tmdb_web/widgets/movie_card_item.dart';
 import 'package:tmdb_web/widgets/trending/trending_card_list.dart';
 
 class TrendingSection extends StatelessWidget {
@@ -23,7 +21,9 @@ class TrendingSection extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           TrendingCardList(),
         ],
       ),
