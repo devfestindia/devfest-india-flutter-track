@@ -24,7 +24,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               TopBannerSearchCard(),
-              SizedBox(height: 40,),
               TrendingSection(),
 
               TrailerSection(),
