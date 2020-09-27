@@ -6,23 +6,35 @@ class TrendingCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 280,
       child: ListView.builder(
           itemCount: 25,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, count) => Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MovieCardItem(
                     imageUrl: "https://www.stevensegallery.com/640/360",
                     height: 200,
                     aspectRatio: 4.0 / 6.0,
                   ),
-                  Text(
-                    faker.person.firstName(),
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                  SizedBox(
+                    height: 10,
                   ),
-                  Text(
-                      '${faker.date.month().toString()} ${faker.date.year().toString()}')
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          faker.person.firstName(),
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                            '${faker.date.month().toString()} ${faker.date.year().toString()}')
+                      ],
+                    ),
+                  ),
                 ],
               )),
     );

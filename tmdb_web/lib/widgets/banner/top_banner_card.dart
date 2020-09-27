@@ -6,21 +6,14 @@ class TopBannerSearchCard extends StatelessWidget {
     return Stack(
       children: [
         TopBannerBackground(),
-        AspectRatio(
-          aspectRatio: 1120 / 360,
-          child: Container(
-            height: 500,
-            alignment: Alignment.bottomCenter,
-            color: Colors.blueGrey.withOpacity(0.7),
-
-            child: Center(child: BannerText()),
-          ),
+        Container(
+          height: 400,
+          alignment: Alignment.bottomCenter,
+          color: Colors.blueGrey.shade900.withOpacity(0.5),
+          child: Center(child: BannerText()),
         ),
-
       ],
     );
-
-
   }
 }
 
@@ -30,15 +23,15 @@ class TopBannerBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-        aspectRatio: 1120 / 360,
-        child: ColorFiltered(
-            colorFilter: new ColorFilter.mode(
-                Colors.blue.withOpacity(0.9), BlendMode.color),
-            child: Image.network(
-              trailerBg,
-              fit: BoxFit.cover,
-            )));
+    return ColorFiltered(
+        colorFilter:
+            new ColorFilter.mode(Colors.blue.withOpacity(0.9), BlendMode.color),
+        child: Image.network(
+          trailerBg,
+          width: MediaQuery.of(context).size.width,
+          height: 400,
+          fit: BoxFit.cover,
+        ));
   }
 }
 
@@ -68,13 +61,17 @@ class BannerText extends StatelessWidget {
             style: TextStyle(
                 color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
           ),
-          SizedBox(height: 40,),
+          SizedBox(
+            height: 40,
+          ),
           TextField(
             textAlign: TextAlign.left,
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
               hintText: 'Search for a name, tv show, person...',
-              hintStyle: TextStyle(fontSize: 16, ),
+              hintStyle: TextStyle(
+                fontSize: 16,
+              ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24),
                 borderSide: BorderSide(
