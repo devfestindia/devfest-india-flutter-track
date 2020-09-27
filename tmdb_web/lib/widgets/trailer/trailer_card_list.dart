@@ -7,7 +7,7 @@ class TrailerCardList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 300,
       child: ListView.builder(
           itemCount: 15,
           scrollDirection: Axis.horizontal,
@@ -19,14 +19,15 @@ class TrailerCardList extends StatelessWidget {
                     child: SizedBox(
                         height: 40, child: Image.asset("images/play.png"))),
               ),
+              SizedBox(height: 10),
               Text(
                 faker.person.firstName(),
                 style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w500),
+                    color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
               ),
               Text(
                 faker.lorem.words(5).toString(),
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 16,),
               )
             ],
           )),
