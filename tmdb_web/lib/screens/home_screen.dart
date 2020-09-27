@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         title: CustomAppbar(),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 300.0),
+        padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.1),
         child: SingleChildScrollView(
           child: Column(
             children: [
