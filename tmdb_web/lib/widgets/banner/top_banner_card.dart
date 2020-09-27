@@ -6,15 +6,12 @@ class TopBannerSearchCard extends StatelessWidget {
     return Stack(
       children: [
         TopBannerBackground(),
-        AspectRatio(
-          aspectRatio: 1120 / 360,
-          child: Container(
-            height: 500,
-            alignment: Alignment.bottomCenter,
-            color: Colors.blueGrey.withOpacity(0.7),
+        Container(
+          height: 400,
+          alignment: Alignment.bottomCenter,
+          color: Colors.blueGrey.withOpacity(0.7),
 
-            child: Center(child: BannerText()),
-          ),
+          child: Center(child: BannerText()),
         ),
 
       ],
@@ -30,15 +27,15 @@ class TopBannerBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-        aspectRatio: 1120 / 360,
-        child: ColorFiltered(
-            colorFilter: new ColorFilter.mode(
-                Colors.blue.withOpacity(0.9), BlendMode.color),
-            child: Image.network(
-              trailerBg,
-              fit: BoxFit.cover,
-            )));
+    return ColorFiltered(
+        colorFilter: new ColorFilter.mode(
+            Colors.blue.withOpacity(0.9), BlendMode.color),
+        child: Image.network(
+          trailerBg,
+          width: MediaQuery.of(context).size.width,
+          height: 400,
+          fit: BoxFit.cover,
+        ));
   }
 }
 
