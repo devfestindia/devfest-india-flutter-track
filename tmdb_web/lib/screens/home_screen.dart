@@ -6,6 +6,7 @@ import 'package:tmdb_web/widgets/trending/trending_section.dart';
 
 import 'package:tmdb_web/widgets/footer/footerboard_tile.dart';
 import 'package:tmdb_web/widgets/leaderboard/leaderboard_tile.dart';
+import 'package:velocity_x/velocity_x.dart'; 
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.1),
+            horizontal: context.isMobile ? 0 : context.screenWidth * 0.1),
         child: SingleChildScrollView(
           child: Column(
             children: [

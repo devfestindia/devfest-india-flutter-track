@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/models/ratings.dart';
 import 'package:tmdb_web/widgets/leaderboard/rating_widget.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LeaderDetailsTile extends StatelessWidget {
   @override
@@ -8,7 +9,8 @@ class LeaderDetailsTile extends StatelessWidget {
     return Container(
       height: 400.0,
       child: GridView.count(
-        crossAxisCount: 2,
+        crossAxisCount: context.isMobile ? 1 : 2,
+        physics: BouncingScrollPhysics(),
         childAspectRatio: MediaQuery.of(context).size.width < 1000 ? 3.0 : 6.0,
         shrinkWrap: true,
         children: ratings.map<Widget>((rate) => leaderTile(rate)).toList(),
@@ -23,6 +25,7 @@ leaderTile(Ratings rate) => Padding(
       // @Kamal, removed the Expanded here, was causing exceptions - Pooja
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
             padding: const EdgeInsets.all(2.0),
@@ -37,20 +40,26 @@ leaderTile(Ratings rate) => Padding(
               },
             ),
           ),
-          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            InkWell(
-              child: Text(
-                rate.leaderDetails,
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
+          Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: InkWell(
+                    child: Text(
+                      rate.leaderDetails,
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
                 ),
-              ),
-              onTap: () {},
-            ),
-            //RatingBar
-            RatingWidget(rate),
-          ]),
+                //RatingBar
+                RatingWidget(rate),
+              ]),
         ],
       ),
     );

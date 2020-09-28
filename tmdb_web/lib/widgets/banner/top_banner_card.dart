@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class TopBannerSearchCard extends StatelessWidget {
   @override
@@ -7,7 +9,7 @@ class TopBannerSearchCard extends StatelessWidget {
       children: [
         TopBannerBackground(),
         Container(
-          height: 400,
+          height: context.isMobile ? 220 : 400,
           alignment: Alignment.bottomCenter,
           color: Colors.blueGrey.shade900.withOpacity(0.5),
           child: Center(child: BannerText()),
@@ -26,10 +28,10 @@ class TopBannerBackground extends StatelessWidget {
     return ColorFiltered(
         colorFilter:
             new ColorFilter.mode(Colors.blue.withOpacity(0.9), BlendMode.color),
-        child: Image.network(
-          trailerBg,
+        child: CachedNetworkImage(
+          imageUrl: trailerBg,
           width: MediaQuery.of(context).size.width,
-          height: 400,
+          height: context.isMobile ? 220 : 400,
           fit: BoxFit.cover,
         ));
   }
@@ -48,7 +50,7 @@ class BannerText extends StatelessWidget {
             'Welcome.',
             style: TextStyle(
                 color: Colors.white,
-                fontSize: 30,
+                fontSize: context.isMobile ? 18 : 30,
                 fontWeight: FontWeight.bold,
                 shadows: [
                   Shadow(
@@ -59,10 +61,12 @@ class BannerText extends StatelessWidget {
           Text(
             'Millions of movies, TV shows and people to discover. Explore now.',
             style: TextStyle(
-                color: Colors.white, fontSize: 25, fontWeight: FontWeight.w500),
+                color: Colors.white,
+                fontSize: context.isMobile ? 16 : 25,
+                fontWeight: FontWeight.w500),
           ),
           SizedBox(
-            height: 40,
+            height: context.isMobile ? 20 : 40,
           ),
           TextField(
             textAlign: TextAlign.left,
@@ -70,7 +74,7 @@ class BannerText extends StatelessWidget {
             decoration: InputDecoration(
               hintText: 'Search for a name, tv show, person...',
               hintStyle: TextStyle(
-                fontSize: 16,
+                fontSize: 14,
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24),
@@ -80,7 +84,7 @@ class BannerText extends StatelessWidget {
                 ),
               ),
               filled: true,
-              contentPadding: EdgeInsets.all(16),
+              contentPadding: EdgeInsets.all(context.isMobile ? 8 : 16),
               fillColor: Colors.white,
             ),
           ),

@@ -14,7 +14,6 @@ class MovieCardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: height ?? 168,
-      padding: EdgeInsets.only(right: 24),
       child: AspectRatio(
         aspectRatio: aspectRatio ?? 300 / 168,
         child: Stack(

@@ -14,8 +14,8 @@ class TrailerSection extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  colorFilter: new ColorFilter.mode(
-                      Colors.blueGrey.withOpacity(0.4), BlendMode.lighten),
+                  colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.8), BlendMode.darken),
                   fit: BoxFit.cover,
                   image: NetworkImage(trailerBg))),
         ),
@@ -24,4 +24,3 @@ class TrailerSection extends StatelessWidget {
     );
   }
 }
-
