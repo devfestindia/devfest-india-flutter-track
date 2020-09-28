@@ -28,7 +28,7 @@ class APIService implements IAPIService {
   }
 
   Future<List<TrendingMovie>> fetchDiscoverMovies() async {
-    final response = await http.get('$baseUrl/discover/tv?api_key=$_apiKey');
+    final response = await http.get('$baseUrl/movie/upcoming?api_key=$_apiKey');
     print(response.body);
     if (response.statusCode == 200) {
       final parsed =

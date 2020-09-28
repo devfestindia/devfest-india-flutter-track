@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/widgets/trailer/trailer_content.dart';
 
@@ -17,7 +18,7 @@ class TrailerSection extends StatelessWidget {
                   colorFilter: ColorFilter.mode(
                       Colors.black.withOpacity(0.8), BlendMode.darken),
                   fit: BoxFit.cover,
-                  image: NetworkImage(trailerBg))),
+                  image: CachedNetworkImageProvider(trailerBg))),
         ),
         TrailerContent(),
       ],

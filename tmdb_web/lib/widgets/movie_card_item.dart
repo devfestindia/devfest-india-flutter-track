@@ -12,7 +12,8 @@ class MovieCardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(seconds: 1),
       height: height ?? 168,
       child: AspectRatio(
         aspectRatio: aspectRatio ?? 300 / 168,

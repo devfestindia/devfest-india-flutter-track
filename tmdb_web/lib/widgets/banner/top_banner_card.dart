@@ -25,15 +25,18 @@ class TopBannerBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ColorFiltered(
-        colorFilter:
-            new ColorFilter.mode(Colors.blue.withOpacity(0.9), BlendMode.color),
-        child: CachedNetworkImage(
-          imageUrl: trailerBg,
-          width: MediaQuery.of(context).size.width,
-          height: context.isMobile ? 220 : 400,
-          fit: BoxFit.cover,
-        ));
+    return AnimatedContainer(
+      duration: const Duration(seconds: 1),
+      child: ColorFiltered(
+          colorFilter: new ColorFilter.mode(
+              Colors.blue.withOpacity(0.9), BlendMode.color),
+          child: CachedNetworkImage(
+            imageUrl: trailerBg,
+            width: MediaQuery.of(context).size.width,
+            height: context.isMobile ? 220 : 400,
+            fit: BoxFit.cover,
+          )),
+    );
   }
 }
 

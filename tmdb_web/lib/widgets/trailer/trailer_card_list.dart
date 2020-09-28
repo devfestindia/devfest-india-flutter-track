@@ -46,14 +46,14 @@ class _TrailerCardListState extends State<TrailerCardList> {
                             ),
                             SizedBox(height: 10),
                             Text(
-                              movie.originalName,
+                              movie.originalTitle,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500),
                             ),
                             Text(
-                              movie.rating.toString(),
+                              movie.rating?.toString(),
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 16,
