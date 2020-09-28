@@ -39,6 +39,7 @@ class _TrailerCardListState extends State<TrailerCardList> {
                           children: [
                             MovieCardItem(
                               imageUrl: getPosterImage(movie.posterPath),
+                              height: 170,
                               stackChild: Center(
                                   child: SizedBox(
                                       height: 40,
