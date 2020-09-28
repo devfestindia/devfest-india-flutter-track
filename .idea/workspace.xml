@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dea64819-5fc8-48d9-8797-195fbafa0758" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/services/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/services/api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/services/repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/services/repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/widgets/movie_card_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/widgets/movie_card_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/widgets/trending/trending_card_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/widgets/trending/trending_card_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_web/lib/widgets/trending/trending_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_web/lib/widgets/trending/trending_section.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1i681Oy5tbv9kpHw6IS5UC1jWUO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tmdb_web/lib" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pawan\Documents\dev\FlutterDev\GDG-DevFest-Flutter\tmdb_web\lib" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dea64819-5fc8-48d9-8797-195fbafa0758" name="Default Changelist" comment="" />
+      <created>1601216466422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601216466422</updated>
+      <workItem from="1601216467713" duration="121000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

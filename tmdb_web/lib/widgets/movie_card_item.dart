@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class MovieCardItem extends StatelessWidget {
@@ -21,7 +22,8 @@ class MovieCardItem extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      fit: BoxFit.cover, image: NetworkImage(imageUrl)),
+                      fit: BoxFit.cover,
+                      image: CachedNetworkImageProvider(imageUrl)),
                   color: Colors.blue,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
             ),

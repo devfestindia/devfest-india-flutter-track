@@ -31,6 +31,8 @@ dependencies:
   font_awesome_flutter: ^8.8.1
   faker: null
   http: ^0.12.2
+  cached_network_image: ^2.3.2+1
+  velocity_x: ^0.4.1
 
 dev_dependencies:
   flutter_test:

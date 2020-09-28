@@ -9,4 +9,6 @@ class Repository {
 
   Future<List<TrendingMovie>> fetchTrendingMovies() =>
       _apiService.fetchTrendingMovies();
+
+  Future<List<TrendingMovie>> fetchDiscoverMovies() => _apiService.fetchDiscoverMovies();
 }
