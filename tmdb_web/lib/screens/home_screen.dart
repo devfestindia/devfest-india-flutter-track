@@ -6,7 +6,7 @@ import 'package:tmdb_web/widgets/trending/trending_section.dart';
 
 import 'package:tmdb_web/widgets/footer/footerboard_tile.dart';
 import 'package:tmdb_web/widgets/leaderboard/leaderboard_tile.dart';
-import 'package:velocity_x/velocity_x.dart'; 
+import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);

@@ -4,7 +4,7 @@ import 'package:tmdb_web/widgets/trailer/trailer_content.dart';
 
 class TrailerSection extends StatelessWidget {
   final String trailerBg =
-      "https://www.wallpapertip.com/wmimgs/42-428352_movie-poster-coming-soon.jpg";
+      "https://image.tmdb.org/t/p/w1920_and_h427_multi_faces/bxZrG6wsmKMoUC1q4ByTWDRHaOh.jpg";
 
   @override
   Widget build(BuildContext context) {

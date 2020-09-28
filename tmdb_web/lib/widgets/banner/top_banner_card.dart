@@ -21,21 +21,18 @@ class TopBannerSearchCard extends StatelessWidget {
 
 class TopBannerBackground extends StatelessWidget {
   final String trailerBg =
-      "https://img.wallpapersafari.com/desktop/1920/1080/5/53/yIQUZE.jpg";
+      "https://image.tmdb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/5GISMqlRXMEyBrgEqyvhaMMuQmJ.jpg";
 
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: const Duration(seconds: 1),
-      child: ColorFiltered(
-          colorFilter: new ColorFilter.mode(
-              Colors.blue.withOpacity(0.9), BlendMode.color),
-          child: CachedNetworkImage(
-            imageUrl: trailerBg,
-            width: MediaQuery.of(context).size.width,
-            height: context.isMobile ? 220 : 400,
-            fit: BoxFit.cover,
-          )),
+      child: CachedNetworkImage(
+        imageUrl: trailerBg,
+        width: MediaQuery.of(context).size.width,
+        height: context.isMobile ? 220 : 400,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
