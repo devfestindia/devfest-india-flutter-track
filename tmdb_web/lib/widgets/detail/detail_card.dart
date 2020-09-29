@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tmdb_web/models/trending_movie.dart';
+import 'package:tmdb_web/utils/utility.dart';
 import 'package:tmdb_web/widgets/detail/detail_description.dart';
 import 'package:tmdb_web/widgets/detail/detail_image.dart';
 
 class DetailCard extends StatelessWidget {
+  final TrendingMovie movie;
+
+  const DetailCard({Key key, @required this.movie}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -10,7 +15,7 @@ class DetailCard extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: NetworkImage(
-              "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/mZjZgY6ObiKtVuKVDrnS9VnuNlE.jpg",
+              getPosterImage(movie.backdropPath),
             ),
           ),
         ),
@@ -25,15 +30,23 @@ class DetailCard extends StatelessWidget {
                   if (constraints.biggest.width > 700)
                     Row(
                       children: [
-                        Center(child: DetailImage()),
-                        Expanded(child: DetailDescription()),
+                        Center(
+                            child: DetailImage(
+                          img: getPosterImage(movie.posterPath),
+                        )),
+                        Expanded(
+                            child: DetailDescription(
+                          movie: movie,
+                        )),
                       ],
                     ),
                   if (constraints.biggest.width <= 700)
                     Column(
                       children: [
-                        DetailImage(),
-                        DetailDescription(),
+                        DetailImage(
+                          img: getPosterImage(movie.posterPath),
+                        ),
+                        DetailDescription(movie: movie),
                       ],
                     ),
                 ],

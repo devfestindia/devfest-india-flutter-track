@@ -1,5 +1,10 @@
 class TrendingMovie {
-  final String originalTitle, originalName, overview, posterPath, releaseDate;
+  final String originalTitle,
+      originalName,
+      overview,
+      posterPath,
+      releaseDate,
+      backdropPath;
   final num id, runTime, voteCount;
   final num rating;
   final List genre;
@@ -13,6 +18,7 @@ class TrendingMovie {
       this.originalName,
       this.overview,
       this.posterPath,
+      this.backdropPath,
       this.id});
   factory TrendingMovie.fromJson(Map<String, dynamic> json) {
     return TrendingMovie(
@@ -20,6 +26,7 @@ class TrendingMovie {
         originalName: json['original_name'],
         overview: json['overview'],
         posterPath: json['poster_path'],
+        backdropPath: json['backdrop_path'],
         id: json['id'],
         runTime: json['runtime'],
         voteCount: json['vote_count'],

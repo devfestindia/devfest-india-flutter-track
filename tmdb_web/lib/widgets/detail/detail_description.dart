@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:tmdb_web/models/trending_movie.dart';
 
 class DetailDescription extends StatelessWidget {
+  final TrendingMovie movie;
+
+  const DetailDescription({Key key, @required this.movie}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -12,7 +16,7 @@ class DetailDescription extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Text(
-              "The Good Doctor (2017)",
+              movie.originalTitle,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 28.0,
@@ -23,20 +27,54 @@ class DetailDescription extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: Row(
               children: [
-                CircleAvatar(backgroundColor: Theme.of(context).primaryColor, minRadius: 25.0, child: Icon(Icons.list, color: Colors.white,),),
-                SizedBox(width: 12.0,),
-                CircleAvatar(backgroundColor: Theme.of(context).primaryColor, minRadius: 25.0, child: Icon(Icons.favorite, color: Colors.white,),),
-                SizedBox(width: 12.0,),
-                CircleAvatar(backgroundColor: Theme.of(context).primaryColor, minRadius: 25.0, child: Icon(Icons.bookmark, color: Colors.white,),),
-                SizedBox(width: 12.0,),
-                CircleAvatar(backgroundColor: Theme.of(context).primaryColor, minRadius: 25.0, child: Icon(Icons.star, color: Colors.white,),),
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  minRadius: 25.0,
+                  child: Icon(
+                    Icons.list,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.0,
+                ),
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  minRadius: 25.0,
+                  child: Icon(
+                    Icons.favorite,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.0,
+                ),
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  minRadius: 25.0,
+                  child: Icon(
+                    Icons.bookmark,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.0,
+                ),
+                CircleAvatar(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  minRadius: 25.0,
+                  child: Icon(
+                    Icons.star,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 12.0),
             child: Text(
-              "His mind is a mystery, his methods are a miracle.",
+              movie.releaseDate,
               style: TextStyle(
                   color: Colors.white.withOpacity(0.7),
                   fontWeight: FontWeight.w300,
@@ -55,7 +93,7 @@ class DetailDescription extends StatelessWidget {
             ),
           ),
           Text(
-            "A young surgeon with Savant syndrome is recruited into the surgical unit of a prestigious hospital. The question will arise: can a person who doesn't have the ability to relate to people actually save their lives?",
+            movie.overview,
             style: TextStyle(color: Colors.white, fontSize: 16.0),
           ),
           Padding(

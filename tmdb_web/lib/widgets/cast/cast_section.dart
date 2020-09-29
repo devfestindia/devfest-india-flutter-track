@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:faker/faker.dart';
-import 'package:tmdb_web/screens/detail_screen.dart';
-import 'package:tmdb_web/widgets/movie_card_item.dart';
 import 'package:tmdb_web/widgets/trending/trending_card_list.dart';
 
 class CastSection extends StatelessWidget {
@@ -9,7 +6,12 @@ class CastSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen()));
+        // Navigator.push(
+        //     context,
+        //     MaterialPageRoute(
+        //         builder: (context) => DetailScreen(
+        //               movie: null,
+        //             )));
       },
       child: Container(
         color: Colors.grey[100],
@@ -21,14 +23,16 @@ class CastSection extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                'Series Cast',
+                'Trending',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.w500,
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             TrendingCardList(),
           ],
         ),
