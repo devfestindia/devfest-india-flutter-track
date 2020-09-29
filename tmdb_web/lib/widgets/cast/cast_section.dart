@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:faker/faker.dart';
 import 'package:tmdb_web/screens/detail_screen.dart';
+import 'package:tmdb_web/widgets/movie_card_item.dart';
 import 'package:tmdb_web/widgets/trending/trending_card_list.dart';
 
-class TrendingSection extends StatelessWidget {
+class CastSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -19,7 +21,7 @@ class TrendingSection extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                'Trending Movies',
+                'Series Cast',
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.w500,
