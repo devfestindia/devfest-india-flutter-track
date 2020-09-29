@@ -12,9 +12,9 @@ class RatingWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         LinearPercentIndicator(
-          width: MediaQuery.of(context).size.width>=1000?200.0:100.0,
+          width: MediaQuery.of(context).size.width >= 1000 ? 300.0 : 100.0,
           animation: true,
-          lineHeight:8.0,
+          lineHeight: 8.0,
           animationDuration: 2500,
           percent: ratings.totalEditPercentage,
           trailing: Text(
@@ -35,9 +35,9 @@ class RatingWidget extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
         LinearPercentIndicator(
-          width: MediaQuery.of(context).size.width>=1000?200.0:100.0,
+          width: MediaQuery.of(context).size.width >= 1000 ? 200.0 : 100.0,
           animation: true,
-          lineHeight:8.0,
+          lineHeight: 8.0,
           animationDuration: 2500,
           percent: ratings.weeklyEditPercentage,
           trailing: Text(

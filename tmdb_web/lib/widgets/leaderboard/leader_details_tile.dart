@@ -7,13 +7,17 @@ class LeaderDetailsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400.0,
-      child: GridView.count(
-        crossAxisCount: context.isMobile ? 1 : 2,
-        physics: BouncingScrollPhysics(),
-        childAspectRatio: MediaQuery.of(context).size.width < 1000 ? 3.0 : 6.0,
-        shrinkWrap: true,
-        children: ratings.map<Widget>((rate) => leaderTile(rate)).toList(),
+      height: MediaQuery.of(context).size.width >= 600 ? 550.0 : 450.0,
+      child: IgnorePointer(
+        child: GridView.count(
+          crossAxisCount: context.isMobile ? 1 : 2,
+          physics: BouncingScrollPhysics(),
+          mainAxisSpacing: 5.0,
+          childAspectRatio:
+              MediaQuery.of(context).size.width <= 800 ? 3.0 : 6.0,
+          shrinkWrap: true,
+          children: ratings.map<Widget>((rate) => leaderTile(rate)).toList(),
+        ),
       ),
     );
   }
