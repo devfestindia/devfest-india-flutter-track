@@ -7,7 +7,7 @@ class LeaderHeaderTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Padding(
-        padding: const EdgeInsets.only(top:8.0),
+        padding: const EdgeInsets.only(top: 8.0),
         child: Text(
           'Leaderboard',
           style: TextStyle(
@@ -85,7 +85,7 @@ class _HeaderContainerTileState extends State<HeaderContainerTile> {
             Color(widget.secondaryColor),
           ],
           begin: Alignment.centerRight,
-          end: new Alignment(-1.0, -1.0),
+          end: Alignment(-1.0, -1.0),
         ),
       ),
     );
