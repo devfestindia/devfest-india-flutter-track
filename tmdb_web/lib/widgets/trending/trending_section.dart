@@ -7,7 +7,8 @@ class TrendingSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => DetailScreen()));
       },
       child: Container(
         color: Colors.grey[100],
@@ -26,7 +27,9 @@ class TrendingSection extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             TrendingCardList(),
           ],
         ),
