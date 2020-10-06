@@ -18,21 +18,21 @@ class HomeScreen extends StatelessWidget {
         //AppBar Section
         title: CustomAppbar(),
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.1),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              TopBannerSearchCard(),
-              TrendingSection(),
-
-              TrailerSection(),
-              //LeaderBoard Section
-              LeaderBoardTile(),
-              //Footer Section
-              FooterBoardTile(),
-            ],
-          ),
+      // @pooja I have removed the the padding, was causing exceptions -kamal
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            TopBannerSearchCard(),
+            SizedBox(
+              height: 40,
+            ),
+            TrendingSection(),
+            TrailerSection(),
+            //LeaderBoard Section
+            LeaderBoardTile(),
+            //Footer Section
+            FooterBoardTile(),
+          ],
         ),
       ),
     );
