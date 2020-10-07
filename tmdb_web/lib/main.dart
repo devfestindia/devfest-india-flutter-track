@@ -7,6 +7,7 @@ import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
+  
 }
 
 final faker = Faker();

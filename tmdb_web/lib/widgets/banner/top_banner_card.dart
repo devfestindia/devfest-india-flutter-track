@@ -29,7 +29,7 @@ class TopBannerBackground extends StatelessWidget {
       duration: const Duration(seconds: 1),
       child: CachedNetworkImage(
         imageUrl: trailerBg,
-        width: MediaQuery.of(context).size.width,
+        width: context.screenWidth,
         height: context.isMobile ? 220 : 400,
         fit: BoxFit.cover,
       ),

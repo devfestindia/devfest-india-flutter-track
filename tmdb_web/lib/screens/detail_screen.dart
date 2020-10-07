@@ -27,7 +27,7 @@ class _DetailScreenState extends State<DetailScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(
             horizontal:
-                context.isMobile ? 0 : MediaQuery.of(context).size.width * 0.1),
+                context.isMobile ? 0 : context.screenWidth * 0.1),
         child: SingleChildScrollView(
           child: Column(
             children: [
