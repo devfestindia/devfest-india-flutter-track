@@ -15,10 +15,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        //AppBar Section
-        title: CustomAppbar(),
+        // actions: [Icon(Icons.search)],
+        // leading: Padding(
+        //   padding: const EdgeInsets.all(8.0),
+        //   child: Image.asset(
+        //     "images/logo.png",
+        //     height: 0,
+        //   ),
+        // ),
+        title: CustomAppBar(),
       ),
-      // @pooja I have removed the the padding, was causing exceptions -kamal
       body: SingleChildScrollView(
         child: Column(
           children: [
