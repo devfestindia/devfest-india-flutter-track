@@ -9,7 +9,7 @@ class TopBannerSearchCard extends StatelessWidget {
         Container(
           height: 220,
           alignment: Alignment.bottomCenter,
-          color: Colors.blueGrey.shade900.withOpacity(0.5),
+          color: Colors.blue.shade900.withOpacity(0.3),
           child: Center(child: BannerText()),
         ),
       ],
@@ -23,15 +23,12 @@ class TopBannerBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ColorFiltered(
-        colorFilter:
-            new ColorFilter.mode(Colors.blue.withOpacity(0.9), BlendMode.color),
-        child: Image.network(
-          trailerBg,
-          width: MediaQuery.of(context).size.width,
-          height: 220,
-          fit: BoxFit.cover,
-        ));
+    return Image.network(
+      trailerBg,
+      width: MediaQuery.of(context).size.width,
+      height: 220,
+      fit: BoxFit.cover,
+    );
   }
 }
 
