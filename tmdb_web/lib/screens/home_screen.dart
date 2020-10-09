@@ -3,7 +3,7 @@ import 'package:tmdb_web/widgets/appbar_section.dart';
 import 'package:tmdb_web/widgets/banner/top_banner_card.dart';
 import 'package:tmdb_web/widgets/trailer/trailer_section.dart';
 import 'package:tmdb_web/widgets/trending/trending_section.dart';
-
+import 'package:velocity_x/velocity_x.dart';
 import 'package:tmdb_web/widgets/footer/footerboard_tile.dart';
 import 'package:tmdb_web/widgets/leaderboard/leaderboard_tile.dart';
 
@@ -19,7 +19,10 @@ class HomeScreen extends StatelessWidget {
         title: CustomAppbar(),
       ),
       // @pooja I have removed the the padding, was causing exceptions -kamal
-      body: SingleChildScrollView(
+      body:Padding(
+        padding: EdgeInsets.symmetric(
+            horizontal: context.isMobile ? 0 : context.screenWidth * 0.1),
+        child:  SingleChildScrollView(
         child: Column(
           children: [
             TopBannerSearchCard(),
@@ -34,6 +37,7 @@ class HomeScreen extends StatelessWidget {
             FooterBoardTile(),
           ],
         ),
+      ),
       ),
     );
   }

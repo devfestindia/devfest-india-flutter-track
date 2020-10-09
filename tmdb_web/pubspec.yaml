@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   percent_indicator: "^2.1.6"
   font_awesome_flutter: ^8.8.1
+  velocity_x: ^0.4.1
   faker:
 
 dev_dependencies:

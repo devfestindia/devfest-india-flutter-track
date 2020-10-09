@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:tmdb_web/models/ratings.dart';
 import 'package:tmdb_web/widgets/leaderboard/rating_widget.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LeaderDetailsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.width >= 600 ? 550.0 : 450.0,
       child: IgnorePointer(
         child: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: context.screenWidth <= 1120 ? 1 : 2,
           mainAxisSpacing: 5.0,
-          childAspectRatio:
-              MediaQuery.of(context).size.width <= 800 ? 3.0 : 6.0,
+          childAspectRatio: 6.0,
           shrinkWrap: true,
           children: ratings.map<Widget>((rate) => leaderTile(rate)).toList(),
         ),
@@ -23,6 +22,8 @@ class LeaderDetailsTile extends StatelessWidget {
 
 //CircleAvatar and Rating bar
 leaderTile(Ratings rate) => Row(
+   mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         InkWell(
           child: CircleAvatar(
@@ -34,7 +35,8 @@ leaderTile(Ratings rate) => Row(
             //
           },
         ),
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Column( crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center, children: [
           InkWell(
             child: Text(
               rate.leaderDetails,
