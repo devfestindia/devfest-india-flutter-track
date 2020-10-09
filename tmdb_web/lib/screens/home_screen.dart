@@ -15,29 +15,36 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       appBar: AppBar(
-        //AppBar Section
+        // actions: [Icon(Icons.search)],
+        // leading: Padding(
+        //   padding: const EdgeInsets.all(8.0),
+        //   child: Image.asset(
+        //     "images/logo.png",
+        //     height: 0,
+        //   ),
+        // ),
         title: CustomAppbar(),
       ),
       // @pooja I have removed the the padding, was causing exceptions -kamal
-      body:Padding(
+      body: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: context.isMobile ? 0 : context.screenWidth * 0.1),
-        child:  SingleChildScrollView(
-        child: Column(
-          children: [
-            TopBannerSearchCard(),
-            SizedBox(
-              height: 40,
-            ),
-            TrendingSection(),
-            TrailerSection(),
-            //LeaderBoard Section
-            LeaderBoardTile(),
-            //Footer Section
-            FooterBoardTile(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              TopBannerSearchCard(),
+              SizedBox(
+                height: 40,
+              ),
+              TrendingSection(),
+              TrailerSection(),
+              //LeaderBoard Section
+              LeaderBoardTile(),
+              //Footer Section
+              FooterBoardTile(),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
