@@ -8,7 +8,7 @@
 
 ![Day2](https://github.com/DevFest-India/devfest-india-flutter-track/blob/master/tmdb_web/images/day2.jpg)
 
-Flutter project demonstrating TMDB clone and powered by tmdb api. 
+Flutter project demonstrating TMDB clone and powered by tmdb API. 
 
 In this track we will explore how to design and develop flutter apps for mobile and then deploy them to the web. Also covering 
 concepts of end to end UI development with responsive layouts,navigation concepts and API management.
@@ -16,7 +16,7 @@ concepts of end to end UI development with responsive layouts,navigation concept
 
 ## Tracks
 
-1. Day1 - TMDB clone of the Home screen with Trending, trailer, leaderboard and Footer section
+1. Day1 - TMDB clone of the Home screen with Trending, Trailer, Leaderboard and Footer section
 2. Day2 - 
 
 
