@@ -21,6 +21,14 @@ concepts of end to end UI development with responsive layouts,navigation concept
 
 
 
+
+## Day 1- Trailer and Trending Section
+
+
+## Day 1- LeaderBoard and Footer Section
+
+<img src="https://github.com/DevFest-India/devfest-india-flutter-track/blob/master/tmdb_web/images/leaderboard.gif" alt="LeaderBoard and Footer Section" width="250"/>
+
 ## Resources
 
 1.Android Studio / VSCode (https://developer.android.com/studio) <br/>
