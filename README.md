@@ -16,13 +16,18 @@ concepts of end to end UI development with responsive layouts,navigation concept
 
 ## Tracks
 
-1. Day1 - TMDB clone of the Home screen with Trending, Trailer, Leaderboard and Footer section
-2. Day2 - 
-
-
+1. Day1 
+ - Introduction to Flutter & Widgets!
+ - TMDB Clone in Flutter which covers the Banner, Trending & Trailer Section, Leaderboard & Footer Section
+ - Working on basic widgets like Rows & Columns, Stacks, ListViews etc
+ - Creating custom widgets for reusing it later. 
+ - Using external libraries from pub.dev and adding it to your Flutter project. 
+2. Day2 
 
 
 ## Day 1- Trailer and Trending Section
+
+<img src="https://github.com/DevFest-India/devfest-india-flutter-track/blob/master/tmdb_web/images/tmdb.gif" alt="AppBar, Banner, Trailer & Trending Section" width="250"/>
 
 
 ## Day 1- LeaderBoard and Footer Section
