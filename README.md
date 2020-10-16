@@ -22,6 +22,7 @@ concepts of end to end UI development with responsive layouts,navigation concept
  - Working on basic widgets like Rows & Columns, Stacks, ListViews etc
  - Creating custom widgets for reusing it later. 
  - Using external libraries from pub.dev and adding it to your Flutter project. 
+ - Navigation concepts & implementation
 2. Day2 
 
 
